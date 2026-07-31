@@ -1,0 +1,13 @@
+.v3-lightning {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    circle at 50% 15%,
+    rgba(255, 255, 255, 0.95),
+    rgba(210, 225, 255, 0.7) 55%,
+    rgba(180, 200, 255, 0.35) 100%
+  );
+}

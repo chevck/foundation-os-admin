@@ -1,0 +1,215 @@
+.v3-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding-top: 22px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.v3-navbar-pill {
+  pointer-events: auto;
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 8px 8px 20px;
+  border-radius: 999px;
+  background: var(--v3-nav-pill-bg);
+  border: 1px solid var(--v3-hairline-soft);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.7);
+}
+
+.v3-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--v3-ink);
+  font-family: var(--v3-font-display);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.v3-navbar-mark {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--v3-amber);
+  box-shadow: 0 0 0 4px var(--v3-amber-soft);
+  flex-shrink: 0;
+}
+
+.v3-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.v3-navbar-links a {
+  text-decoration: none;
+  color: var(--v3-ink-soft);
+  font-size: 14.5px;
+  font-weight: 400;
+  transition: color 0.4s var(--v3-ease-soft);
+}
+
+.v3-navbar-links a:hover {
+  color: var(--v3-ink);
+}
+
+.v3-navbar-cta {
+  padding: 6px 6px 6px 18px;
+  font-size: 13.5px;
+}
+
+.v3-navbar-cta .v3-btn-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.v3-navbar-cta .v3-btn-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.v3-navbar-theme {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--v3-hairline);
+  background: var(--v3-glass-strong);
+  color: var(--v3-ink);
+  cursor: pointer;
+  transition: background-color 0.4s var(--v3-ease-soft), transform 0.5s var(--v3-ease);
+}
+
+.v3-navbar-theme:hover {
+  transform: rotate(-14deg);
+}
+
+.v3-navbar-theme svg {
+  width: 16px;
+  height: 16px;
+}
+
+.v3-navbar-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--v3-hairline);
+  background: var(--v3-glass-strong);
+  color: var(--v3-ink);
+  cursor: pointer;
+  position: relative;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.v3-navbar-toggle-line {
+  width: 15px;
+  height: 1.4px;
+  background: var(--v3-ink);
+  border-radius: 2px;
+  transition: transform 0.5s var(--v3-ease), opacity 0.3s var(--v3-ease);
+  position: absolute;
+}
+
+.v3-navbar-toggle-line:first-child {
+  transform: translateY(-3.5px);
+}
+
+.v3-navbar-toggle-line:last-child {
+  transform: translateY(3.5px);
+}
+
+.v3-navbar-toggle-line.is-open:first-child {
+  transform: translateY(0) rotate(45deg);
+}
+
+.v3-navbar-toggle-line.is-open:last-child {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.v3-navbar-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  background: var(--v3-overlay-bg);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v3-navbar-overlay-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.v3-navbar-overlay-links a {
+  text-decoration: none;
+  color: var(--v3-ink);
+  font-family: var(--v3-font-display);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.v3-navbar-overlay-cta {
+  margin-top: 14px;
+  font-size: 15px;
+}
+
+.v3-navbar-theme-mobile {
+  width: auto;
+  height: auto;
+  border-radius: 999px;
+  padding: 10px 20px;
+  gap: 10px;
+  font-family: var(--v3-font-body);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.v3-navbar-theme-mobile svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 880px) {
+  .v3-navbar-links,
+  .v3-navbar-cta,
+  .v3-navbar-pill .v3-navbar-theme:not(.v3-navbar-theme-mobile) {
+    display: none;
+  }
+
+  .v3-navbar-brand {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .v3-navbar-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+}

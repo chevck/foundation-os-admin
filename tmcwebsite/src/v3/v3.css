@@ -1,0 +1,292 @@
+/* THE MOISTURE CONFERENCE — Night Garden Edition
+   Cinematic illustrated skin: deep off-black, glowing amber/emerald mesh,
+   glass double-bezel surfaces, hand-drawn constellation-style illustration.
+   Scoped under .v3-page so it never leaks into the classic or storybook skins. */
+
+.v3-page {
+  --v3-bg: #070c0b;
+  --v3-bg-raised: #0d1613;
+  --v3-bg-raised-2: #101c18;
+  --v3-ink: #f5f1e6;
+  --v3-ink-soft: rgba(245, 241, 230, 0.66);
+  --v3-ink-faint: rgba(245, 241, 230, 0.42);
+
+  --v3-amber: #f2b263;
+  --v3-amber-ink: #f2b263;
+  --v3-amber-soft: rgba(242, 178, 99, 0.16);
+  --v3-emerald: #55d9a3;
+  --v3-emerald-soft: rgba(85, 217, 163, 0.14);
+
+  --v3-glass: rgba(255, 255, 255, 0.045);
+  --v3-glass-strong: rgba(255, 255, 255, 0.08);
+  --v3-hairline: rgba(255, 255, 255, 0.11);
+  --v3-hairline-soft: rgba(255, 255, 255, 0.065);
+
+  --v3-shadow-inset: rgba(255, 255, 255, 0.07);
+  --v3-icon-chip-bg: rgba(255, 255, 255, 0.08);
+  --v3-nav-pill-bg: rgba(13, 22, 19, 0.62);
+  --v3-overlay-bg: rgba(5, 9, 8, 0.86);
+  --v3-input-bg: rgba(255, 255, 255, 0.03);
+  --v3-title-glow: 0 0 46px rgba(242, 178, 99, 0.5);
+  --v3-rain-color: #dff5ea;
+
+  --v3-ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --v3-ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --v3-font-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
+  --v3-font-body: "Hanken Grotesk", system-ui, sans-serif;
+
+  background: var(--v3-bg);
+  color: var(--v3-ink);
+  font-family: var(--v3-font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.65;
+  position: relative;
+  overflow-x: hidden;
+  transition:
+    background-color 0.5s var(--v3-ease-soft),
+    color 0.5s var(--v3-ease-soft);
+}
+
+.v3-page[data-theme="light"] {
+  --v3-bg: #f5f2ea;
+  --v3-bg-raised: #fffdf8;
+  --v3-bg-raised-2: #eef0e4;
+  --v3-ink: #17161c;
+  --v3-ink-soft: rgba(23, 22, 28, 0.64);
+  --v3-ink-faint: rgba(23, 22, 28, 0.42);
+
+  --v3-amber-ink: #8a570e;
+  --v3-amber-soft: rgba(242, 178, 99, 0.2);
+  --v3-emerald-soft: rgba(85, 217, 163, 0.18);
+
+  --v3-glass: rgba(23, 22, 28, 0.035);
+  --v3-glass-strong: rgba(23, 22, 28, 0.065);
+  --v3-hairline: rgba(23, 22, 28, 0.12);
+  --v3-hairline-soft: rgba(23, 22, 28, 0.08);
+
+  --v3-shadow-inset: rgba(23, 22, 28, 0.04);
+  --v3-icon-chip-bg: rgba(23, 22, 28, 0.06);
+  --v3-nav-pill-bg: rgba(255, 253, 248, 0.72);
+  --v3-overlay-bg: rgba(245, 242, 234, 0.92);
+  --v3-input-bg: rgba(23, 22, 28, 0.03);
+  --v3-title-glow: none;
+  --v3-rain-color: #2f9d74;
+}
+
+.v3-page * {
+  box-sizing: border-box;
+}
+
+.v3-page h1,
+.v3-page h2,
+.v3-page h3,
+.v3-page h4 {
+  font-family: var(--v3-font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--v3-ink);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.v3-page :where(p) {
+  margin: 0;
+}
+
+.v3-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v3-page a {
+  color: inherit;
+}
+
+.v3-page img,
+.v3-page svg {
+  display: block;
+  max-width: 100%;
+}
+
+.v3-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.v3-section {
+  padding: clamp(72px, 11vw, 152px) 0;
+  position: relative;
+}
+
+@media (max-width: 720px) {
+  .v3-section {
+    padding: 64px 0;
+  }
+  .v3-container {
+    padding: 0 20px;
+  }
+}
+
+/* ---------- eyebrow ---------- */
+
+.v3-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 7px 16px 7px 8px;
+  background: var(--v3-glass);
+  border: 1px solid var(--v3-hairline-soft);
+  font-family: var(--v3-font-display);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--v3-ink-soft);
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 420px) {
+  .v3-eyebrow {
+    font-size: 9.5px;
+    letter-spacing: 0.13em;
+    padding: 6px 13px 6px 8px;
+  }
+}
+
+.v3-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--v3-amber);
+  box-shadow: 0 0 0 3px var(--v3-amber-soft);
+  flex-shrink: 0;
+}
+
+.v3-section-head {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.v3-section-head h2 {
+  margin-top: 18px;
+  font-size: clamp(30px, 4.2vw, 46px);
+}
+
+.v3-section-head p:not(.v3-eyebrow) {
+  margin-top: 18px;
+  font-size: 17px;
+  color: var(--v3-ink-soft);
+}
+
+/* ---------- double-bezel surfaces ---------- */
+
+.v3-bezel {
+  padding: 7px;
+  border-radius: 2rem;
+  background: var(--v3-glass);
+  border: 1px solid var(--v3-hairline-soft);
+}
+
+.v3-bezel-core {
+  border-radius: calc(2rem - 7px);
+  background: var(--v3-bg-raised);
+  border: 1px solid var(--v3-hairline);
+  box-shadow:
+    inset 0 1px 0 var(--v3-shadow-inset),
+    0 40px 70px -36px rgba(0, 0, 0, 0.65);
+}
+
+/* ---------- buttons ---------- */
+
+.v3-btn {
+  --v3-btn-bg: var(--v3-glass-strong);
+  --v3-btn-fg: var(--v3-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--v3-font-display);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 7px 7px 7px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--v3-hairline);
+  background: var(--v3-btn-bg);
+  color: var(--v3-btn-fg);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.5s var(--v3-ease),
+    background-color 0.4s var(--v3-ease-soft),
+    border-color 0.4s var(--v3-ease-soft);
+}
+
+.v3-btn:active {
+  transform: scale(0.97);
+}
+
+.v3-btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--v3-icon-chip-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    transform 0.5s var(--v3-ease),
+    background-color 0.4s var(--v3-ease-soft);
+}
+
+.v3-btn-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.v3-btn-primary {
+  --v3-btn-bg: var(--v3-amber);
+  --v3-btn-fg: #201304;
+  border-color: transparent;
+}
+
+.v3-btn-primary .v3-btn-icon {
+  background: rgba(32, 19, 4, 0.14);
+}
+
+.v3-btn-primary:hover .v3-btn-icon,
+.v3-btn-ghost:hover .v3-btn-icon {
+  transform: translate(2px, -2px) scale(1.06);
+}
+
+.v3-btn-ghost:hover {
+  background: var(--v3-glass);
+  border-color: var(--v3-hairline);
+}
+
+/* ---------- glow blobs (ambient) ---------- */
+
+.v3-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+/* ---------- scroll reveal fallback (no-JS / reduced motion) ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .v3-page * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

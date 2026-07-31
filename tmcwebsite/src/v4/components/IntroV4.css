@@ -1,0 +1,30 @@
+.v4-intro {
+  padding-top: clamp(44px, 6vw, 72px);
+  padding-bottom: 40px;
+}
+
+.v4-intro-inner {
+  max-width: 760px;
+}
+
+.v4-intro-title {
+  margin-top: 20px;
+  font-size: clamp(32px, 4.6vw, 56px);
+  max-width: 18ch;
+}
+
+.v4-intro-sub {
+  margin-top: 22px;
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--v4-ink-soft);
+  max-width: 52ch;
+}
+
+.v4-intro-actions {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}

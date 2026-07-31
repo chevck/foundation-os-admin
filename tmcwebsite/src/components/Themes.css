@@ -1,0 +1,110 @@
+.themes {
+  position: relative;
+  background: var(--moss-dark);
+  padding: 40px 0 0;
+}
+
+.themes-head {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.themes-eyebrow {
+  color: var(--gold);
+  justify-content: center;
+}
+
+.themes-head h2,
+.themes-head p {
+  color: var(--cream);
+}
+
+.themes-head h2 {
+  margin-top: 14px;
+  font-size: clamp(28px, 3.6vw, 38px);
+}
+
+.themes-head p {
+  color: rgba(247, 241, 227, 0.72);
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 48px 0 88px;
+}
+
+.theme-card {
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 40px -28px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 44px -24px rgba(0, 0, 0, 0.55);
+}
+
+.theme-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.25s ease;
+}
+
+.theme-card:hover .theme-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.theme-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.theme-icon-soil {
+  background: var(--soil-tint);
+  color: var(--soil);
+}
+.theme-icon-water {
+  background: var(--water-tint);
+  color: var(--water-dark);
+}
+.theme-icon-gold {
+  background: #f7e9c9;
+  color: #8a5f1a;
+}
+
+.theme-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.theme-card p {
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .themes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .themes-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 40px 0 64px;
+  }
+}

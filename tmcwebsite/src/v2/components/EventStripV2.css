@@ -1,0 +1,98 @@
+.v2-eventstrip {
+  background: var(--v2-cream);
+  padding: 40px 0 96px;
+}
+
+.v2-eventstrip-frame {
+  box-shadow: 6px 7px 0 var(--v2-ink), 0 34px 54px -26px rgba(58, 46, 34, 0.3);
+}
+
+.v2-eventstrip-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: stretch;
+}
+
+.v2-eventstrip-art {
+  position: relative;
+  background: var(--v2-sky);
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v2-eventstrip-mascot-a {
+  position: absolute;
+  left: 22%;
+  top: 28%;
+}
+
+.v2-eventstrip-mascot-b {
+  position: absolute;
+  right: 20%;
+  bottom: 22%;
+}
+
+.v2-eventstrip-info {
+  background: var(--v2-plum);
+  color: var(--v2-cream);
+  padding: 44px 44px;
+}
+
+.v2-eventstrip-eyebrow {
+  color: var(--v2-butter);
+}
+
+.v2-eventstrip-info h2 {
+  margin-top: 10px;
+  color: var(--v2-paper);
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.v2-eventstrip-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.v2-eventstrip-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--v2-font-display);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.v2-eventstrip-list svg {
+  width: 20px;
+  height: 20px;
+  color: var(--v2-butter);
+  flex-shrink: 0;
+}
+
+.v2-eventstrip-note {
+  margin-top: 20px;
+  font-size: 15px;
+  color: rgba(255, 250, 241, 0.75);
+  max-width: 420px;
+}
+
+.v2-eventstrip-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 780px) {
+  .v2-eventstrip-card {
+    grid-template-columns: 1fr;
+  }
+
+  .v2-eventstrip-info {
+    padding: 36px 28px;
+  }
+}

@@ -1,0 +1,88 @@
+.v3-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.v3-glow-amber {
+  width: 46vw;
+  height: 46vw;
+  max-width: 620px;
+  max-height: 620px;
+  top: -12vw;
+  right: -10vw;
+  background: radial-gradient(circle at 40% 40%, rgba(242, 178, 99, 0.22), transparent 70%);
+  animation: v3-glow-drift-a 22s ease-in-out infinite;
+}
+
+.v3-glow-emerald {
+  width: 40vw;
+  height: 40vw;
+  max-width: 560px;
+  max-height: 560px;
+  bottom: -14vw;
+  left: -8vw;
+  background: radial-gradient(circle at 40% 40%, rgba(85, 217, 163, 0.16), transparent 70%);
+  animation: v3-glow-drift-b 26s ease-in-out infinite;
+}
+
+@keyframes v3-glow-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-3%, 4%) scale(1.08); }
+}
+
+@keyframes v3-glow-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, -3%) scale(1.1); }
+}
+
+.v3-ambient {
+  --v3-storm-intensity: 0;
+}
+
+.v3-ambient-raindrop {
+  position: absolute;
+  top: -8%;
+  width: 1.6px;
+  height: var(--v3-raindrop-length, 20px);
+  border-radius: 2px;
+  background: linear-gradient(to bottom, transparent, var(--v3-rain-color));
+  opacity: 0;
+  /* speeds up as the storm builds: full base duration at intensity 0,
+     down to ~45% of it at full intensity */
+  animation-duration: calc(var(--v3-raindrop-base-duration, 2.4s) * (1 - 0.55 * var(--v3-storm-intensity)));
+  animation-name: v3-ambient-rain-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes v3-ambient-rain-fall {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.45;
+  }
+  100% {
+    /* wind picks up with intensity: drift grows to ~2x its base pull */
+    transform: translate(calc(var(--v3-drift) * (1 + var(--v3-storm-intensity))), 112vh);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v3-glow-amber,
+  .v3-glow-emerald,
+  .v3-ambient-raindrop {
+    animation: none;
+  }
+  .v3-ambient-raindrop {
+    display: none;
+  }
+}

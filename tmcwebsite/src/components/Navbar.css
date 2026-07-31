@@ -1,0 +1,153 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 241, 227, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(247, 241, 227, 0.95);
+  border-bottom-color: var(--line);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.navbar-brand-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--soil);
+  flex-shrink: 0;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.15s ease;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: var(--soil);
+  transition: right 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--soil);
+}
+
+.navbar-links a:hover::after {
+  right: 0;
+}
+
+.navbar-brand-icon {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-brand-icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.navbar-cta {
+  padding: 11px 22px;
+  font-size: 14px;
+}
+
+.navbar-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.navbar-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-mobile {
+    display: block;
+    border-top: 1px solid var(--line);
+    background: var(--cream);
+    padding: 20px 24px 28px;
+  }
+
+  .navbar-mobile nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .navbar-mobile-link {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 17px;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .navbar-mobile .btn {
+    margin-top: 16px;
+    border-bottom: none;
+    padding: 15px 28px;
+  }
+}

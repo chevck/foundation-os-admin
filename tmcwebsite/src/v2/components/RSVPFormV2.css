@@ -1,0 +1,143 @@
+.v2-rsvp {
+  background: var(--v2-mint);
+}
+
+.v2-rsvp-eyebrow {
+  color: var(--v2-mint-dark);
+  justify-content: center;
+}
+
+.v2-rsvp-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v2-rsvp-card {
+  width: 100%;
+  max-width: 578px;
+  box-shadow: 6px 7px 0 var(--v2-ink), 0 34px 54px -26px rgba(18, 57, 50, 0.35);
+}
+
+.v2-rsvp-card-core {
+  padding: 34px;
+}
+
+.v2-rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.v2-rsvp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.v2-rsvp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.v2-rsvp-field label {
+  font-family: var(--v2-font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--v2-ink);
+}
+
+.v2-rsvp-field input,
+.v2-rsvp-field select {
+  font-family: var(--v2-font-body);
+  font-weight: 600;
+  font-size: 15.5px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 2px solid var(--v2-ink);
+  background: var(--v2-cream);
+  color: var(--v2-ink);
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+
+.v2-rsvp-field input:focus,
+.v2-rsvp-field select:focus {
+  box-shadow: 3px 4px 0 var(--v2-sky-dark);
+}
+
+.v2-rsvp-field input[aria-invalid='true'],
+.v2-rsvp-field select[aria-invalid='true'] {
+  border-color: var(--v2-coral-dark);
+}
+
+.v2-rsvp-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233a2e22' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.v2-rsvp-error {
+  font-size: 13px;
+  color: var(--v2-coral-dark);
+  font-weight: 700;
+}
+
+.v2-rsvp-form .v2-btn {
+  margin-top: 8px;
+}
+
+.v2-rsvp-success {
+  text-align: center;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v2-rsvp-success-mascot {
+  margin-bottom: 8px;
+}
+
+.v2-rsvp-success-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--v2-mint);
+  border: 2.5px solid var(--v2-ink);
+  color: var(--v2-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 18px;
+}
+
+.v2-rsvp-success-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.v2-rsvp-success h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.v2-rsvp-success p {
+  color: var(--v2-ink-soft);
+  margin-bottom: 26px;
+  max-width: 380px;
+}
+
+@media (max-width: 560px) {
+  .v2-rsvp-card-core {
+    padding: 24px 18px;
+  }
+
+  .v2-rsvp-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,121 @@
+.v4-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--v4-paper);
+  border-bottom: 1px solid var(--v4-line);
+}
+
+.v4-navbar-inner {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.v4-navbar-brand {
+  font-family: var(--v4-font-display);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--v4-ink);
+  margin-right: auto;
+}
+
+.v4-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.v4-navbar-links a {
+  text-decoration: none;
+  color: var(--v4-ink-soft);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s var(--v4-ease);
+}
+
+.v4-navbar-links a:hover {
+  color: var(--v4-cobalt);
+}
+
+.v4-navbar-cta {
+  padding: 9px 20px;
+  font-size: 13.5px;
+}
+
+.v4-navbar-cta svg {
+  width: 14px;
+  height: 14px;
+}
+
+.v4-navbar-toggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--v4-ink);
+  cursor: pointer;
+}
+
+.v4-navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .v4-navbar-links,
+  .v4-navbar-cta {
+    display: none;
+  }
+
+  .v4-navbar-toggle {
+    display: flex;
+  }
+
+  .v4-navbar-mobile {
+    display: block;
+    background: var(--v4-paper);
+    border-bottom: 1px solid var(--v4-line);
+    padding: 8px 20px 28px;
+  }
+
+  .v4-navbar-mobile nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .v4-navbar-mobile-link {
+    display: block;
+    text-decoration: none;
+    color: var(--v4-ink);
+    font-family: var(--v4-font-display);
+    font-size: 22px;
+    font-weight: 500;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--v4-line);
+  }
+
+  .v4-navbar-mobile .v4-btn {
+    margin-top: 18px;
+  }
+
+  .v4-navbar-switches {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .v4-navbar-switches a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--v4-ink-faint);
+    text-decoration: none;
+  }
+}

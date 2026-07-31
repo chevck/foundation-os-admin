@@ -1,0 +1,143 @@
+.v3-rsvp-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v3-rsvp-card {
+  width: 100%;
+  max-width: 580px;
+}
+
+.v3-rsvp-card-core {
+  padding: 44px;
+}
+
+.v3-rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.v3-rsvp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.v3-rsvp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.v3-rsvp-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--v3-ink-soft);
+}
+
+.v3-rsvp-field input,
+.v3-rsvp-field select {
+  font-family: var(--v3-font-body);
+  font-size: 15px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--v3-hairline);
+  background: var(--v3-input-bg);
+  color: var(--v3-ink);
+  outline: none;
+  transition: border-color 0.4s var(--v3-ease-soft), background-color 0.4s var(--v3-ease-soft);
+}
+
+.v3-rsvp-field input::placeholder {
+  color: var(--v3-ink-faint);
+}
+
+.v3-rsvp-field input:focus,
+.v3-rsvp-field select:focus {
+  border-color: var(--v3-amber);
+  background: rgba(242, 178, 99, 0.05);
+}
+
+.v3-rsvp-field input[aria-invalid='true'],
+.v3-rsvp-field select[aria-invalid='true'] {
+  border-color: #e58a7a;
+}
+
+.v3-rsvp-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f1e6' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-color: transparent;
+  padding-right: 42px;
+}
+
+.v3-rsvp-field select option {
+  background: var(--v3-bg-raised);
+  color: var(--v3-ink);
+}
+
+.v3-page[data-theme='light'] .v3-rsvp-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2317161c' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.v3-rsvp-error {
+  font-size: 12.5px;
+  color: #e58a7a;
+  font-weight: 500;
+}
+
+.v3-rsvp-submit {
+  margin-top: 6px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.v3-rsvp-success {
+  text-align: center;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v3-rsvp-success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--v3-emerald-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.v3-rsvp-success-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--v3-emerald);
+}
+
+.v3-rsvp-success h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.v3-rsvp-success p {
+  color: var(--v3-ink-soft);
+  margin-bottom: 28px;
+  max-width: 380px;
+}
+
+@media (max-width: 560px) {
+  .v3-rsvp-card-core {
+    padding: 30px 24px;
+  }
+
+  .v3-rsvp-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

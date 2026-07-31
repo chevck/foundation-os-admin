@@ -1,0 +1,103 @@
+.v3-mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.v3-mentor-card {
+  cursor: default;
+}
+
+.v3-mentor-card-core {
+  padding: 32px 26px;
+  text-align: center;
+}
+
+.v3-mentor-ring {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--v3-bg-raised-2);
+  border: 1px solid var(--v3-hairline);
+  position: relative;
+}
+
+.v3-mentor-ring::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1.4px solid transparent;
+  background: conic-gradient(from 0deg, var(--v3-ring-a), var(--v3-ring-b), var(--v3-ring-a)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.7;
+}
+
+.v3-mentor-ring-amber {
+  --v3-ring-a: #f2b263;
+  --v3-ring-b: rgba(242, 178, 99, 0.15);
+}
+
+.v3-mentor-ring-emerald {
+  --v3-ring-a: #55d9a3;
+  --v3-ring-b: rgba(85, 217, 163, 0.15);
+}
+
+.v3-mentor-ring span {
+  font-family: var(--v3-font-display);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--v3-ink);
+}
+
+.v3-mentor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.v3-mentor-eyebrow {
+  font-family: var(--v3-font-display);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--v3-ink-faint);
+  margin-bottom: 6px;
+}
+
+.v3-mentor-card-core h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.v3-mentor-topic {
+  display: inline-flex;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--v3-glass);
+  border: 1px solid var(--v3-hairline-soft);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--v3-ink-soft);
+}
+
+@media (max-width: 900px) {
+  .v3-mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .v3-mentors-grid {
+    grid-template-columns: 1fr;
+  }
+}

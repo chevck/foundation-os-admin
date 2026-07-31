@@ -1,0 +1,84 @@
+.v4-speakers {
+  padding-top: 24px;
+}
+
+.v4-speakers-head {
+  font-size: clamp(24px, 3vw, 32px);
+  max-width: 20ch;
+  margin-bottom: 36px;
+}
+
+.v4-speakers-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.v4-speaker-card {
+  margin: 0;
+}
+
+.v4-speaker-photo-frame {
+  border-radius: 3px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--v4-ink);
+}
+
+.v4-speaker-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.08);
+  transition: transform 0.6s var(--v4-ease), filter 0.4s var(--v4-ease);
+}
+
+.v4-speaker-card:hover .v4-speaker-photo-frame img {
+  transform: scale(1.04);
+  filter: grayscale(0.2) contrast(1.05);
+}
+
+.v4-speaker-card figcaption {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.v4-speaker-name {
+  font-family: var(--v4-font-display);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+}
+
+.v4-speaker-topic {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--v4-ink-faint);
+}
+
+@media (max-width: 900px) {
+  .v4-speakers-row {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 46%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .v4-speaker-card {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .v4-speakers-row {
+    grid-auto-columns: 62%;
+  }
+}

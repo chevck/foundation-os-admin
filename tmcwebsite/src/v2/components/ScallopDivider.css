@@ -1,0 +1,22 @@
+.scallop {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  margin-top: -1px;
+}
+
+.scallop svg {
+  width: 100%;
+  height: 26px;
+  display: block;
+}
+
+.scallop-flip svg {
+  transform: scaleY(-1);
+}
+
+@media (max-width: 720px) {
+  .scallop svg {
+    height: 18px;
+  }
+}

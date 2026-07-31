@@ -1,0 +1,55 @@
+.v4-vision-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.v4-vision-art {
+  border-radius: 3px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  position: relative;
+}
+
+.v4-vision-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(47, 70, 201, 0.34), rgba(23, 22, 28, 0.5));
+  mix-blend-mode: multiply;
+}
+
+.v4-vision-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.5) contrast(1.05);
+}
+
+.v4-vision-copy h2 {
+  font-size: clamp(32px, 3.6vw, 46px);
+}
+
+.v4-vision-copy p {
+  margin-top: 20px;
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--v4-ink-soft);
+  max-width: 54ch;
+}
+
+.v4-vision-copy p:first-of-type {
+  margin-top: 22px;
+}
+
+@media (max-width: 860px) {
+  .v4-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .v4-vision-art {
+    aspect-ratio: 16 / 10;
+  }
+}

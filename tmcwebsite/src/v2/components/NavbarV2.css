@@ -1,0 +1,139 @@
+.v2-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-top: 16px;
+}
+
+.v2-navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--v2-paper);
+  border: 2.5px solid var(--v2-ink);
+  border-radius: 999px;
+  padding: 10px 12px 10px 18px;
+  box-shadow: 4px 5px 0 var(--v2-ink), 0 22px 34px -22px rgba(58, 46, 34, 0.32);
+}
+
+.v2-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--v2-ink);
+  font-family: var(--v2-font-display);
+  font-weight: 700;
+  font-size: 13.5px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.v2-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.v2-navbar-links a {
+  text-decoration: none;
+  color: var(--v2-ink-soft);
+  font-weight: 700;
+  font-size: 15px;
+  transition: color 0.15s ease;
+}
+
+.v2-navbar-links a:hover {
+  color: var(--v2-coral-dark);
+}
+
+.v2-navbar-cta {
+  padding: 6px 6px 6px 20px;
+  font-size: 14px;
+  box-shadow: 2.5px 3px 0 var(--v2-ink);
+}
+
+.v2-navbar-cta .v2-btn-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.v2-navbar-cta .v2-btn-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.v2-navbar-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--v2-ink);
+  background: var(--v2-mint);
+  color: var(--v2-ink);
+  cursor: pointer;
+}
+
+.v2-navbar-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.v2-navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .v2-navbar-links,
+  .v2-navbar-cta {
+    display: none;
+  }
+
+  .v2-navbar-toggle {
+    display: flex;
+  }
+
+  .v2-navbar-mobile {
+    display: block;
+    margin-top: 12px;
+    background: var(--v2-paper);
+    border: 2.5px solid var(--v2-ink);
+    border-radius: 24px;
+    padding: 18px 22px 24px;
+    box-shadow: 4px 5px 0 var(--v2-ink);
+  }
+
+  .v2-navbar-mobile nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .v2-navbar-mobile a {
+    text-decoration: none;
+    color: var(--v2-ink);
+    font-weight: 700;
+    font-size: 17px;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--v2-line);
+  }
+
+  .v2-navbar-mobile .v2-btn {
+    margin-top: 16px;
+    border-bottom: none;
+    padding: 15px 28px;
+  }
+
+  .v2-navbar-switch {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--v2-ink-soft);
+    text-decoration: none;
+  }
+}

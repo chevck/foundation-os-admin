@@ -1,0 +1,141 @@
+.footer {
+  position: relative;
+  background: var(--moss-dark);
+  color: var(--cream);
+}
+
+.footer-inner {
+  padding: 64px 0 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.footer-brand-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+}
+
+.footer-brand p {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14.5px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: rgba(247, 241, 227, 0.65);
+  line-height: 1.6;
+}
+
+.footer-switches {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-switch {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13.5px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--gold);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(247, 241, 227, 0.8);
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 241, 227, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.footer-social a:hover {
+  background: rgba(247, 241, 227, 0.12);
+  border-color: var(--gold);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-base {
+  border-top: 1px solid rgba(247, 241, 227, 0.15);
+}
+
+.footer-base-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-base p {
+  font-size: 13.5px;
+  color: rgba(247, 241, 227, 0.55);
+}
+
+@media (max-width: 720px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-base-inner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-switches {
+    justify-content: center;
+    gap: 12px 20px;
+  }
+}

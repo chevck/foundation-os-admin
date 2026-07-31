@@ -1,0 +1,78 @@
+.v3-event-card-core {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  overflow: hidden;
+}
+
+.v3-event-art {
+  position: relative;
+  min-height: 280px;
+  background: linear-gradient(180deg, #0d1b17, #070c0b);
+}
+
+.v3-event-art-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.v3-event-info {
+  padding: 48px 46px;
+}
+
+.v3-event-info h2 {
+  margin-top: 14px;
+  font-size: clamp(24px, 3vw, 32px);
+  max-width: 14ch;
+}
+
+.v3-event-list {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.v3-event-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15.5px;
+  font-weight: 500;
+}
+
+.v3-event-list svg {
+  width: 18px;
+  height: 18px;
+  color: var(--v3-amber);
+  flex-shrink: 0;
+}
+
+.v3-event-note {
+  margin-top: 22px;
+  font-size: 15px;
+  color: var(--v3-ink-soft);
+  max-width: 420px;
+}
+
+.v3-event-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 780px) {
+  .v3-event-card-core {
+    grid-template-columns: 1fr;
+  }
+
+  .v3-event-art {
+    min-height: 200px;
+  }
+
+  .v3-event-info {
+    padding: 38px 28px;
+  }
+}

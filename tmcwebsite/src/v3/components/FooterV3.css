@@ -1,0 +1,114 @@
+.v3-footer {
+  position: relative;
+  padding-top: 8px;
+}
+
+.v3-footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(242, 178, 99, 0.35), rgba(85, 217, 163, 0.3), transparent);
+}
+
+.v3-footer-inner {
+  padding: 60px 0 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.v3-footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.v3-footer-title {
+  font-family: var(--v3-font-display);
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--v3-ink);
+}
+
+.v3-footer-desc {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--v3-ink-faint);
+  line-height: 1.6;
+}
+
+.v3-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 2px;
+}
+
+.v3-footer-links a {
+  text-decoration: none;
+  color: var(--v3-ink-soft);
+  font-size: 14.5px;
+  transition: color 0.4s var(--v3-ease-soft);
+}
+
+.v3-footer-links a:hover {
+  color: var(--v3-amber-ink);
+}
+
+.v3-footer-social {
+  display: flex;
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.v3-footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--v3-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--v3-ink-soft);
+  transition: border-color 0.4s var(--v3-ease-soft), color 0.4s var(--v3-ease-soft);
+}
+
+.v3-footer-social a:hover {
+  border-color: var(--v3-amber-ink);
+  color: var(--v3-amber-ink);
+}
+
+.v3-footer-social svg {
+  width: 16px;
+  height: 16px;
+}
+
+.v3-footer-base {
+  border-top: 1px solid var(--v3-hairline-soft);
+}
+
+.v3-footer-base-inner {
+  padding-top: 20px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.v3-footer-base p {
+  font-size: 13px;
+  color: var(--v3-ink-faint);
+}
+
+@media (max-width: 720px) {
+  .v3-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .v3-footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+  }
+}

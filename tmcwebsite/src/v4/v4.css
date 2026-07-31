@@ -1,0 +1,208 @@
+/* THE MOISTURE CONFERENCE — Dossier Edition
+   Editorial, speaker-led program layout: cool paper + ink, one cobalt
+   accent, Cormorant Garamond display over Archivo body. Scoped under
+   .v4-page so it never leaks into the classic, storybook, or night
+   garden skins. */
+
+.v4-page {
+  --v4-paper: #f2f2ec;
+  --v4-paper-raised: #ffffff;
+  --v4-ink: #17161c;
+  --v4-ink-soft: rgba(23, 22, 28, 0.64);
+  --v4-ink-faint: rgba(23, 22, 28, 0.42);
+  --v4-line: rgba(23, 22, 28, 0.14);
+
+  --v4-cobalt: #2f46c9;
+  --v4-cobalt-dark: #202f8f;
+  --v4-cobalt-soft: rgba(47, 70, 201, 0.09);
+
+  --v4-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --v4-font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --v4-font-body: 'Archivo', system-ui, sans-serif;
+
+  background: var(--v4-paper);
+  color: var(--v4-ink);
+  font-family: var(--v4-font-body);
+  font-weight: 400;
+  font-size: 16.5px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.v4-page * {
+  box-sizing: border-box;
+}
+
+.v4-page h1,
+.v4-page h2,
+.v4-page h3,
+.v4-page h4 {
+  font-family: var(--v4-font-display);
+  font-weight: 500;
+  color: var(--v4-ink);
+  margin: 0;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+}
+
+.v4-page p {
+  margin: 0;
+}
+
+.v4-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v4-page a {
+  text-decoration: none;
+}
+
+.v4-page img,
+.v4-page svg {
+  display: block;
+  max-width: 100%;
+}
+
+.v4-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.v4-section {
+  padding: clamp(64px, 9vw, 128px) 0;
+  position: relative;
+}
+
+@media (max-width: 720px) {
+  .v4-section {
+    padding: 56px 0;
+  }
+  .v4-container {
+    padding: 0 20px;
+  }
+}
+
+/* ---------- eyebrow (rationed: max 1 per 3 sections) ---------- */
+
+.v4-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--v4-font-body);
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--v4-cobalt);
+}
+
+.v4-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--v4-cobalt);
+}
+
+.v4-section-head h2 {
+  margin-top: 14px;
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.v4-section-head p {
+  margin-top: 16px;
+  font-size: 16.5px;
+  color: var(--v4-ink-soft);
+  max-width: 56ch;
+}
+
+/* ---------- buttons ---------- */
+
+.v4-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--v4-font-body);
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  border: 1.5px solid var(--v4-ink);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  color: var(--v4-ink);
+  transition: background-color 0.4s var(--v4-ease), color 0.4s var(--v4-ease), border-color 0.4s var(--v4-ease),
+    transform 0.4s var(--v4-ease);
+}
+
+.v4-btn:active {
+  transform: scale(0.97);
+}
+
+.v4-btn-primary {
+  background: var(--v4-ink);
+  color: var(--v4-paper);
+}
+
+.v4-btn-primary:hover {
+  background: var(--v4-cobalt);
+  border-color: var(--v4-cobalt);
+}
+
+.v4-btn-ghost:hover {
+  background: var(--v4-ink);
+  color: var(--v4-paper);
+}
+
+.v4-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s var(--v4-ease);
+}
+
+.v4-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.v4-btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---------- cards (shape lock: sharp editorial, 2px radius) ---------- */
+
+.v4-frame {
+  border-radius: 3px;
+  border: 1px solid var(--v4-line);
+  background: var(--v4-paper-raised);
+}
+
+/* ---------- scroll reveal ---------- */
+
+.v4-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(4px);
+  transition: opacity 0.8s var(--v4-ease), transform 0.8s var(--v4-ease), filter 0.8s var(--v4-ease);
+}
+
+.v4-reveal-in {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v4-reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

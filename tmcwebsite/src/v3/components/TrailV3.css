@@ -1,0 +1,125 @@
+.v3-trail-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.v3-trail-tile {
+  cursor: default;
+}
+
+.v3-trail-tile-lg {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.v3-trail-tile-md {
+  grid-column: span 3;
+}
+
+.v3-trail-tile-sm {
+  grid-column: span 2;
+}
+
+.v3-trail-tile-core {
+  position: relative;
+  height: 100%;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.v3-trail-tile-lg .v3-trail-tile-core {
+  padding: 38px 34px;
+  justify-content: center;
+}
+
+.v3-trail-tile-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.v3-trail-tile-icon-amber {
+  background: var(--v3-amber-soft);
+}
+
+.v3-trail-tile-icon-amber svg {
+  color: var(--v3-amber);
+}
+
+.v3-trail-tile-icon-emerald {
+  background: var(--v3-emerald-soft);
+}
+
+.v3-trail-tile-icon-emerald svg {
+  color: var(--v3-emerald);
+}
+
+.v3-trail-tile-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.v3-trail-tile-index {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-family: var(--v3-font-display);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-faint);
+}
+
+.v3-trail-tile-core h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.v3-trail-tile-lg .v3-trail-tile-core h3 {
+  font-size: 27px;
+}
+
+.v3-trail-tile-core p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--v3-ink-soft);
+}
+
+.v3-trail-tile-lg .v3-trail-tile-core p {
+  font-size: 16.5px;
+  max-width: 32ch;
+}
+
+@media (max-width: 900px) {
+  .v3-trail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .v3-trail-tile-lg,
+  .v3-trail-tile-md,
+  .v3-trail-tile-sm {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .v3-trail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v3-trail-tile-lg,
+  .v3-trail-tile-md,
+  .v3-trail-tile-sm {
+    grid-column: span 1;
+  }
+
+  .v3-trail-tile-lg .v3-trail-tile-core {
+    padding: 32px 26px;
+  }
+}
